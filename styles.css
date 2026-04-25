@@ -1,0 +1,23 @@
+/* here desktop styles */
+.zoo-navbar {
+  align-items: center;
+  background-color: brown;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  /* here the tablet styles */
+  .zoo-navbar {
+    background-color: lightgreen;
+  }
+
+}
+
+@media (max-width: 375px) {
+  /* here the mobile styles */
+  .zoo-navbar {
+    background-color: lightgreen;
+  }
+}
