@@ -6,50 +6,95 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles.css">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
 
   <title>ZOO Landing Project</title>
 
-  <style>
-  </style>
+  <script src="index.js" defer></script>
 </head>
 <body>
-  <nav class="zoo-navbar">
-    <img src="./images/logo.svg" alt="Blogr Logo">
-
-    Product
-
-    Overview
-    Pricing
-    Marketplace
-    Features
-    Integrations
-
-    Company
-
-    About
-    Team
-    Blog
-    Careers
-
-    Connect
-
-    Contact
-    Newsletter
-    LinkedIn
-
-    Login
-    Sign Up
-  </nav>
-
-
   <section class="zoo-hero">
-    <h1>A modern publishing platform</h1>
-    <p>Grow your audience and build your online brand</p>
 
-    <div>
-      <button class="btn-primary">Start for Free</button>
-      <button class="btn-secondary">Learn More</button>
+    <nav class="zoo-navbar">
+      <span class="navbar-logo">Blogr</span>
+      <button class="navbar-toggle" id="menuToggle" aria-label="Toggle menu">
+        <img
+          src="./images/icon-hamburger.svg"
+          alt="Open menu"
+          class="icon-hamburger"
+          id="iconHamburger"
+        />
+
+        <img
+          src="./images/icon-close.svg"
+          alt="Close menu"
+          class="icon-close"
+          id="iconClose"
+        />
+      </button>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <div class="menu-panel" id="menuPanel">
+      <div class="menu-item">
+        <button class="menu-btn" id="btnProduct">
+          Product
+          <img src="./images/icon-arrow-dark.svg" alt="arrow" class="menu-arrow" />
+        </button>
+        <div class="submenu" id="subProduct">
+          <a href="#">Overview</a>
+          <a href="#">Pricing</a>
+          <a href="#">Marketplace</a>
+          <a href="#">Features</a>
+          <a href="#">Integrations</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button class="menu-btn" id="btnCompany">
+          Company
+          <img src="./images/icon-arrow-dark.svg" alt="arrow" class="menu-arrow" />
+        </button>
+        <div class="submenu" id="subCompany">
+          <a href="#">About</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <button class="menu-btn" id="btnConnect">
+          Connect
+          <img src="./images/icon-arrow-dark.svg" alt="arrow" class="menu-arrow" />
+        </button>
+        <div class="submenu" id="subConnect">
+          <a href="#">Contact</a>
+          <a href="#">Newsletter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+
+      <hr class="menu-divider" />
+
+      <div class="menu-auth">
+        <button class="menu-login">Login</button>
+        <button class="menu-signup">Sign Up</button>
+      </div>
+    </div>
+
+
+    <div class="zoo-hero--content">
+      <h1>A modern publishing platform</h1>
+      <p>Grow your audience and build your online brand</p>
+      <div class="hero-btns">
+        <button class="btn-primary">Start for Free</button>
+        <button class="btn-secondary">Learn More</button>
+      </div>
+
     </div>
   </section>
 
