@@ -295,3 +295,85 @@ body {
     font-size: 3rem;
   }
 }
+/* Designed for pepe */
+
+.zoo-future {
+  padding: 5rem 1.5rem 4rem;
+  text-align: left;
+  overflow: hidden;
+}
+
+.future-eyebrow {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: #1f1c34;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.future-feature {
+  margin-bottom: 2.5rem;
+}
+
+.future-feature h3 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1f1c34;
+  margin-bottom: 0.75rem;
+}
+
+.future-feature p {
+  font-size: 0.95rem;
+  color: #7b7b8a;
+  line-height: 1.75;
+}
+
+.future-image {
+   margin-top: 5rem;
+   text-align: center;
+}
+
+.future-image img {
+   width: 100%;
+  max-width: 420px;
+}
+/* Designed for pepe */
+
+/* Designed for pepe Desktop*/
+
+@media (min-width: 1024px) {
+  .zoo-future {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    padding: 7rem 5rem 7rem 5rem;
+    overflow: visible;
+  }
+
+  .future-eyebrow {
+    text-align: center;
+    font-size: 2rem;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .future-image {
+    margin-top: 0;
+    text-align: right;
+    overflow: visible;
+}
+
+.future-image img {
+  width: 130%;
+    max-width: none;
+    transform: translateX(5rem);
+}
+
+.future-text-block {
+  padding-right: 2rem;
+}
+}
