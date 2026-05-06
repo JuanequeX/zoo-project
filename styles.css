@@ -295,85 +295,220 @@ body {
     font-size: 3rem;
   }
 }
-/* Designed for pepe */
+/* Designed for the future */
 
 .zoo-future {
-  padding: 5rem 1.5rem 4rem;
-  text-align: left;
-  overflow: hidden;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .future-eyebrow {
-  font-family: 'Overpass', sans-serif;
-  font-size: 1.65rem;
-  font-weight: 600;
-  color: #1f1c34;
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-
-.future-feature {
-  margin-bottom: 2.5rem;
-}
-
-.future-feature h3 {
-  font-family: 'Overpass', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #1f1c34;
-  margin-bottom: 0.75rem;
-}
-
-.future-feature p {
-  font-size: 0.95rem;
-  color: #7b7b8a;
-  line-height: 1.75;
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 600;
+    color: #1f1c34;
+    margin-bottom: 2rem; 
 }
 
 .future-image {
-   margin-top: 5rem;
-   text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
 }
 
 .future-image img {
-   width: 100%;
-  max-width: 420px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
 }
-/* Designed for pepe */
 
-/* Designed for pepe Desktop*/
+.future-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; 
+    max-width: 500px; 
+}
 
+.future-feature h3 {
+    font-family: 'Overpass', sans-serif;
+    font-size: 1.5rem;
+    color: #1f1c34;
+    margin-bottom: 1rem;
+}
+
+.future-feature p {
+    font-size: 1rem;
+    color: #7b7b8a;
+    line-height: 1.7;
+}
+
+/* DESKTOP STYLE */
 @media (min-width: 1024px) {
+  
   .zoo-future {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 2rem;
-    padding: 7rem 5rem 7rem 5rem;
-    overflow: visible;
+    gap: 40px; 
+    max-width: 1110px; 
+    margin: 0 auto;
+    padding: 100px 0; 
+    overflow-x: hidden; 
   }
 
   .future-eyebrow {
-    text-align: center;
-    font-size: 2rem;
     grid-column: 1 / -1;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 80px;
   }
 
   .future-image {
-    margin-top: 0;
-    text-align: right;
-    overflow: visible;
+    order: 2; 
+    width: 140%;
+    margin-right: 150px; 
+  }
+
+  .future-image img {
+    width: 100%; 
+    max-width: none; 
+    height: auto;
+    display: block;
+  }
+
+  .future-content {
+    text-align: left; 
+    padding-left: 80px;  
+  }
+  .future-content {
+    max-width: 500px;
+}
+}
+/* DESKTOP STYLE END*/
+
+/* FOOTER ZOO PROJECT */
+:root {
+  --very-dark-blue: hsl(240, 19%, 5%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --very-dark-black-blue: hsl(240, 10%, 16%);
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%); 
 }
 
-.future-image img {
-  width: 130%;
-    max-width: none;
-    transform: translateX(5rem);
+body {
+  margin: 0;
+  font-family: 'Overpass', sans-serif; 
 }
 
-.future-text-block {
-  padding-right: 2rem;
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+.zoo-footer {
+  background-color: var(--very-dark-black-blue);
+  color: var(--white);
+  padding: 50px 24px; 
+  border-top-right-radius: 100px; 
+  text-align: center; 
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 50px; 
+  max-width: 1110px; 
+  margin: 0 auto; 
+}
+
+.footer-logo img {
+  width: 90px; 
+  height: auto;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column; 
+  gap: 42px; 
+  width: 100%; 
+}
+
+.footer-heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px; 
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 12px; 
+}
+
+.footer-link {
+  color: var(--grayish-blue);
+  font-size: 16px;
+  font-weight: 300;
+  transition: color 0.3s ease; 
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  color: var(--grayish-blue); 
+}
+/* FOOTER TABLET STYLES */
+@media (min-width: 768px) {
+  
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    text-align: left; 
+    padding: 0 10%;
+  }
+
+  .footer-links {
+    flex-direction: row; 
+    gap: 80px; 
+    width: auto;
+  }
+
+  .footer-heading {
+    margin-bottom: 30px; 
+  }
+  
+  .footer-logo img {
+    margin-top: -10px; 
+  }
+}
+/* FOOTER TABLET STYLES END*/
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 10%;
+    gap: 150px; 
+  }
+
+  .footer-links {
+    flex-direction: row;
+    width: auto; 
+    gap: 100px; 
+  }
 }
