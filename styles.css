@@ -264,42 +264,65 @@ body {
   cursor: pointer;
 }
 
-/* ─── HERO END─── */
-
-@media (min-width: 768px) {
-
 .zoo-infrastructure {
-background: linear-gradient( 135deg,hsl(237, 17%, 21%),hsl(237, 23%, 31%)   );
-border-radius: 0 100px 0 100px;
-padding: 14rem 1.5rem 6rem 1.5rem;
-display: flex;
-flex-direction: column;   
-align-items: center;
-text-align: center;
-gap: 3rem;
+  background: linear-gradient(135deg, hsl(237, 17%, 21%), hsl(237, 23%, 31%));
+  border-radius: 0 100px 0 100px;
+  padding: 0 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.infrastructure-circles {
+  position: absolute;
+  width: 420px;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.infrastructure-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -120px;
 }
 
 .infrastructure-image img {
-width: 100%;
-max-width: 340px;
-margin-top: -10re;
+  width: 90%;
+  max-width: 320px;
+  position: relative;
+  z-index: 1;
+  display: block;
 }
 
+
 .infrastructure-content h2 {
-font-family: "overpass", sans-serif;
-font-size: 1.75rem;
-font-weight: 600;
-color: hsl(0, 100%, 100%);
-margin-bottom: 1rem;
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: hsl(0, 100%, 100%);
+  margin-bottom: 1rem;
 }
 
 .infrastructure-content p {
-font-size: 0.95rem;
-color: rgba(255, 255, 255, 0.75);
-line-height: 1.7;
-max-width: 480px;
-margin: 0 auto;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto;
 }
+
+
+
+@media (min-width: 768px) {
+
+
   .zoo-navbar {
     background-color: lightgreen;
   }
