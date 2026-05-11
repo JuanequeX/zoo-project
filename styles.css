@@ -7,16 +7,13 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
 body {
   font-family: 'Overpass', sans-serif;
   background: #fff;
   margin: 0;
 }
 
-/* here the mobile styles */
-
-/* ─── NAVBAR START ─── */
+/* ─── NAVBAR ─── */
 .zoo-navbar {
   padding: 0 1.5rem;
   height: 64px;
@@ -26,7 +23,6 @@ body {
   position: relative;
   z-index: 10;
 }
-
 .navbar-logo {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.5rem;
@@ -34,7 +30,6 @@ body {
   color: #fff;
   letter-spacing: -0.5px;
 }
-
 .navbar-toggle {
   background: none;
   border: none;
@@ -44,22 +39,8 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.icon-hamburger {
-  width: 28px;
-  height: 22px;
-}
-
-.icon-close {
-  width: 22px;
-  height: 22px;
-}
-
-.icon-close { display: none; }
-/* ─── NAVBAR END ─── */
-
-
-/* ─── MENU OVERLAY ─── */
+.icon-hamburger { width: 28px; height: 22px; }
+.icon-close { width: 22px; height: 22px; display: none; }
 .menu-overlay {
   position: fixed;
   inset: 0;
@@ -69,15 +50,10 @@ body {
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
-
 .menu-overlay.open {
   opacity: 1;
   pointer-events: all;
 }
-/* ─── MENU OVERLAY END ─── */
-
-
-/* ─── SLIDE-IN MENU PANEL ─── */
 .menu-panel {
   position: fixed;
   top: 80px;
@@ -94,13 +70,11 @@ body {
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
 }
-
 .menu-panel.open {
   opacity: 1;
   pointer-events: all;
   transform: translateX(-50%) translateY(0);
 }
-
 .menu-btn {
   width: 100%;
   display: flex;
@@ -116,17 +90,10 @@ body {
   color: #1f1c34;
   cursor: pointer;
 }
-
-.menu-arrow {
-  width: 12px;
-  height: 8px;
-  transition: transform 0.2s;
-}
-
+.menu-arrow { width: 12px; height: 8px; transition: transform 0.2s; }
 .menu-btn img { transition: transform 0.2s; }
 .menu-btn.active img { transform: rotate(180deg); }
 .menu-btn.active { color: #5c5b65ce; }
-
 .submenu {
   background: #f5f5f7;
   border-radius: 8px;
@@ -134,9 +101,7 @@ body {
   max-height: 0;
   transition: max-height 0.3s ease;
 }
-
 .submenu.open { max-height: 200px; }
-
 .submenu a {
   display: block;
   text-align: center;
@@ -145,22 +110,18 @@ body {
   color: #555;
   text-decoration: none;
 }
-
 .submenu a:hover { color: #e8524a; }
-
 .menu-divider {
   border: none;
   border-top: 1px solid #eee;
   margin: 1rem 0;
 }
-
 .menu-auth {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
 }
-
 .menu-login {
   background: none;
   border: none;
@@ -170,7 +131,6 @@ body {
   color: #1f1c34;
   cursor: pointer;
 }
-
 .menu-signup {
   padding: 0.65rem 2rem;
   border-radius: 100px;
@@ -184,7 +144,6 @@ body {
   width: 100%;
 }
 
-
 /* ─── HERO ─── */
 .zoo-hero {
   background: linear-gradient(160deg, #e8524a 0%, #ff9560 100%);
@@ -194,33 +153,23 @@ body {
   overflow: hidden;
   border-radius: 0 0 0 120px;
 }
-
 .zoo-hero::before {
   content: '';
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 300px; height: 300px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.07);
-  bottom: -120px;
-  right: -80px;
+  bottom: -120px; right: -80px;
 }
-
 .zoo-hero::after {
   content: '';
   position: absolute;
-  width: 200px;
-  height: 200px;
+  width: 200px; height: 200px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
-  top: -60px;
-  left: -50px;
+  top: -60px; left: -50px;
 }
-
-.zoo-hero--content {
-  margin: 6rem 0;
-}
-
+.zoo-hero--content { margin: 6rem 0; }
 .zoo-hero--content h1 {
   font-family: 'Overpass', sans-serif;
   font-size: 2rem;
@@ -231,7 +180,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 .zoo-hero--content p {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.85);
@@ -240,7 +188,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 .hero-btns {
   display: flex;
   gap: 1rem;
@@ -248,7 +195,6 @@ body {
   position: relative;
   z-index: 1;
 }
-
 .btn-primary {
   padding: 0.75rem 1.5rem;
   border-radius: 100px;
@@ -260,7 +206,6 @@ body {
   border: none;
   cursor: pointer;
 }
-
 .btn-secondary {
   padding: 0.75rem 1.5rem;
   border-radius: 100px;
@@ -273,44 +218,40 @@ body {
   cursor: pointer;
 }
 
+/* ─── INFRASTRUCTURE ─── */
+.infrastructure-wrapper { overflow: hidden; }
 .zoo-infrastructure {
   background: linear-gradient(135deg, hsl(237, 17%, 21%), hsl(237, 23%, 31%));
-  border-radius: 0 100px 0 100px;
+  border-radius: 0 80px 0 80px;
   padding: 0 1.5rem 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 2rem;
-  position: relative;
-  overflow: hidden;
+  margin-top: 10rem;
 }
-.infrastructure-circles {
-  position: absolute;
-  width: 420px;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-
 .infrastructure-image {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: -120px;
+  margin-top: -10rem;
 }
-
-.infrastructure-image img {
-  width: 90%;
-  max-width: 320px;
+.infrastructure-circles {
+  position: absolute;
+  width: 395px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 0;
+}
+.infrastructure-image img:not(.infrastructure-circles) {
+  width: 85%;
+  max-width: 300px;
   position: relative;
   z-index: 1;
-  display: block;
 }
-
-
 .infrastructure-content h2 {
   font-family: 'Overpass', sans-serif;
   font-size: 1.75rem;
@@ -318,7 +259,6 @@ body {
   color: hsl(0, 100%, 100%);
   margin-bottom: 1rem;
 }
-
 .infrastructure-content p {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.75);
@@ -327,6 +267,7 @@ body {
   margin: 0 auto;
 }
 
+/* ─── FUTURE ─── */
 .zoo-future {
   align-items: center;
   padding: 60px 20px;
@@ -380,8 +321,42 @@ body {
   line-height: 1.7;
 }
 
-/* FOOTER ZOO PROJECT */
+/* ─── EDITOR ─── */
+.zoo-editor {
+  padding: 5rem 1.5rem;
+  text-align: center;
+  background: #fff;
+}
+.editor-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.editor-laptop {
+  width: 100%;
+  max-width: 400px;
+}
+.editor-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.editor-block h2 {
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: hsl(208, 49%, 24%);
+  margin-bottom: 1rem;
+}
+.editor-block p {
+  font-size: 0.95rem;
+  color: hsl(207, 13%, 34%);
+  line-height: 1.7;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
+/* ─── FOOTER ─── */
 ul {
   list-style-type: none;
   padding: 0;
@@ -445,7 +420,7 @@ a {
   color: var(--grayish-blue);
 }
 
-/* HERE TABLET STYLES START */
+/* ─── TABLET ─── */
 @media (min-width: 768px) {
 
   .zoo-navbar {
@@ -474,33 +449,56 @@ a {
     margin-top: -10px;
   }
 }
-/* HERE TABLET STYLES END */
 
-/* DESKTOP */
+/* ─── DESKTOP ─── */
 @media (min-width: 1024px) {
+
   .zoo-navbar {
     padding: 0 2.5rem;
     height: 72px;
   }
-
   .navbar-toggle { display: none; }
-
-  .menu-panel {
-    display: none; /* replace with desktop nav later */
-  }
+  .menu-panel { display: none; }
 
   .zoo-hero {
     padding: 5rem 2rem 7rem;
   }
 
-  .zoo-hero h1 {
-    font-size: 3rem;
+  .zoo-infrastructure {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0.1rem 4rem 0 0;
+    gap: 2rem;
+    margin-top: 4rem;
+    min-height: 350px;
+    overflow: visible;
+  }
+
+  .infrastructure-image {
+    flex: 1;
+    margin-top: -14rem;
+    margin-bottom: -10rem;
+  }
+  .infrastructure-image img:not(.infrastructure-circles) {
+    max-width: 400px;
+    width: 100%;
+  }
+  .infrastructure-circles {
+    width: 800px;
+    transform: translate(-55%, -69%);
+  }
+  .infrastructure-content {
+    flex: 0 0 400px;
+    padding-right: 1rem;
+  }
+  .infrastructure-content h2 {
+    font-size: 2.25rem;
   }
 
   .zoo-future {
     position: relative;
     padding: 100px 0;
-    /* No max-width here — section is full width */
   }
 
   .future-eyebrow {
@@ -518,12 +516,11 @@ a {
     margin: 0 auto;
     padding: 0 40px;
     position: relative;
-    /* min-height: 500px; */
   }
 
   .future-image {
     position: absolute;
-    right: -300px; /* bleed RIGHT beyond the container */
+    right: -300px;
     top: 50%;
     transform: translateY(-50%);
     width: 55%;
@@ -548,6 +545,32 @@ a {
 
   .future-feature + .future-feature {
     margin-top: 40px;
+  }
+
+  .zoo-editor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6rem 5rem 6rem 0;
+    gap: 2rem;
+    text-align: left;
+    overflow: hidden;
+  }
+  .editor-image {
+    flex: 1.2;
+    margin-bottom: 0;
+    margin-left: -5rem;
+  }
+  .editor-laptop {
+    max-width: 100%;
+    width: 100%;
+  }
+  .editor-content {
+    flex: 1;
+    padding-right: 3rem;
+  }
+  .editor-block p {
+    margin: 0;
   }
 
   .footer-container {
