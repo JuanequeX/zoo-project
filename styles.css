@@ -7,11 +7,15 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+html {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Overpass', sans-serif;
   background: #fff;
   margin: 0;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* here the mobile styles */
@@ -593,25 +597,25 @@ a {
 /* ─── ZOO INFRASTRUCTURE DESKTOP ─── */
   .zoo-infrastructure {
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     text-align: left;
     padding: 0 6rem 0 0;
     gap: 0;
-    min-height: 480px;
+    min-height: 400px;
     overflow: visible;
   }
 
   .infrastructure-circles {
-    width: 800px;
-    top: 50%;
-    left: -200px;
+    width: 600px;
+    top: 20%;
+    left: -90px;
     transform: translateY(-50%);
   }
 
   .infrastructure-image {
     width: 50%;
-    margin-top: -120px;
+    margin-top: -200px;
     margin-bottom: -80px;
     justify-content: center;
     flex-shrink: 0;
@@ -619,12 +623,12 @@ a {
 
   .infrastructure-image img {
     width: 100%;
-    max-width: 480px;
+    max-width: 420px;
   }
 
   .infrastructure-content {
     width: 50%;
-    padding-left: 3rem;
+    padding-left: 4rem;
   }
 
   .infrastructure-content h2 {
@@ -634,9 +638,14 @@ a {
 
   .infrastructure-content p {
     font-size: 1rem;
-    max-width: 420px;
+    max-width: 380px;
     margin: 0;
   }
+  .infrastructure-image--overflow {
+  overflow: visible;
+  position: relative;
+  z-index: 2;
+}
 
   /* ─── ZOO LAPTOP DESKTOP ─── */
   .zoo-laptop {
@@ -654,13 +663,13 @@ a {
     justify-content: flex-start;
     flex-shrink: 0;
     position: relative;
-    left: -120px;
+    left: -200px;
   }
 
   .laptop-image__desktop {
     display: block;
     width: 100%;
-    max-width: 600px;
+    max-width: 550px;
   }
 
   .laptop-image__mobile {
@@ -669,7 +678,7 @@ a {
 
   .laptop-content {
     width: 45%;
-    max-width: 460px;
+    max-width: 500px;
   }
 
   .laptop-feature h3 {
