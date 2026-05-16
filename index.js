@@ -3,7 +3,7 @@ const panel = document.getElementById('menuPanel');
 const overlay = document.getElementById('menuOverlay');
 const iconH = document.getElementById('iconHamburger');
 const iconX = document.getElementById('iconClose');
-let menuOpen = false;
+let menuOpen = false; // boolean
 
 function toggleMenu() {
   menuOpen = !menuOpen;
