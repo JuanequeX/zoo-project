@@ -383,7 +383,7 @@ body {
   color: #7b7b8a;
   line-height: 1.7;
 }
-/* ─── ZOO INFRASTRUCTURE MOBILE ─── */  
+/* ─── ZOO INFRASTRUCTURE MOBILE ─── */
 .zoo-infrastructure {
   background: linear-gradient(135deg, hsl(237, 17%, 21%), hsl(237, 23%, 31%));
   border-radius: 10px 110px 10px 110px;
@@ -703,11 +703,11 @@ a {
     font-size: 3rem;
   }
 
-  .zoo-future {
-    position: relative;
-    padding: 100px 0;
-    /* No max-width here — section is full width */
-  }
+ .zoo-future {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
 
   .future-eyebrow {
     text-align: center;
@@ -716,20 +716,18 @@ a {
 
   .zoo-future-container {
     display: flex;
-    justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    width: 90%;
-    min-height: 600px;
-    margin: 0 auto;
-    padding: 0 40px;
+    justify-content: flex-start;
     position: relative;
-    /* min-height: 500px; */
+    width: 85%;
+    margin: 0 auto;
+    min-height: 780px;
   }
 
   .future-image {
     position: absolute;
-    right: -300px; /* bleed RIGHT beyond the container */
+    right: -300px;
     top: 50%;
     transform: translateY(-50%);
     width: 55%;
@@ -737,10 +735,11 @@ a {
   }
 
   .future-content {
-    max-width: 685px;
-    margin-left: 0;
-    margin-right: auto;
-    text-align: left;
+    width: 50%;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   .future-image__desktop {
@@ -769,6 +768,5 @@ a {
     flex-direction: row;
     gap: 100px;
     width: auto;
-    
   }
 }
